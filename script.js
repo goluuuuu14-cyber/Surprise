@@ -1,7 +1,7 @@
 // ================= LETTER OPEN =================
 
 function openLetter() {
-    document.body.classList.add("body-top");
+    document.querySelector(".slider-wrapper").classList.add("slider-hide");
 
     const letterContainer = document.getElementById("letter-container");
     const letterWindow = document.querySelector(".letter-window");
@@ -78,7 +78,8 @@ window.onload = function () {
 let galleryIndex = 0;
 
 function toggleGallery() {
-    document.body.classList.add("body-top");
+    document.querySelector(".slider-wrapper").classList.add("slider-hide");
+
 
     const gallery = document.getElementById("gallery");
 
@@ -106,7 +107,8 @@ function moveGallery(direction) {
 // ================= DROP LETTER =================
 
 function openLetterDrop() {
-    document.body.classList.add("body-top");
+    document.querySelector(".slider-wrapper").classList.add("slider-hide");
+
 
     const container = document.getElementById("dropLetter");
     const letter = document.getElementById("letterDropContent");
