@@ -161,6 +161,8 @@ function closeDropLetter() {
     document.body.classList.remove("body-top");
 }
 
+// ================= IMAGE PREVIEW =================
+
 function openPreview(img) {
     const preview = document.getElementById("imagePreview");
     const previewImg = document.getElementById("previewImg");
@@ -172,4 +174,5 @@ function openPreview(img) {
 function closePreview() {
     document.getElementById("imagePreview").style.display = "none";
 }
+
 
