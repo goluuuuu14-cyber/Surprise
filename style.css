@@ -171,17 +171,25 @@ display: inline-block;
 
 .left { left: -40px; }
 .right { right: -40px; }
+
 .gallery {
-  overflow-x: auto;
-  white-space: nowrap;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .gallery-track {
-  display: inline-flex;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
 }
 
 .gallery-track img {
-  width: 200px;
-  margin: 10px;
+  width: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
