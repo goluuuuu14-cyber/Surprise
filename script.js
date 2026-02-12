@@ -70,3 +70,23 @@ yesBtn.addEventListener("click", () => {
 
     finalText.style.display = "block";
 });
+function toggleGallery() {
+    const gallery = document.getElementById("gallery");
+    gallery.style.display = gallery.style.display === "none" ? "block" : "none";
+}
+
+function expandImage(img) {
+    img.style.transform = img.style.transform === "scale(1.5)" ? "scale(1)" : "scale(1.5)";
+}
+
+function openLetterDrop() {
+    const container = document.getElementById("dropLetter");
+    const letter = document.getElementById("letterDropContent");
+
+    container.style.display = "block";
+
+    setTimeout(() => {
+        letter.style.marginTop = "150px";
+    }, 100);
+}
+
