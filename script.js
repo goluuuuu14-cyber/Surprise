@@ -121,18 +121,33 @@ function openLetterDrop() {
 }
 
 function closeLetter() {
-    document.getElementById("letter-container").style.display = "none";
+    const letterContainer = document.getElementById("letter-container");
+    const letterWindow = document.querySelector(".letter-window");
+
+    letterWindow.classList.remove("open");
+    letterContainer.style.display = "none";
+
     document.querySelector(".slider-wrapper").classList.remove("slider-hide");
+    document.body.classList.remove("body-top");
 }
 
 function closeGallery() {
-    document.getElementById("gallery").style.display = "none";
+    const gallery = document.getElementById("gallery");
+
+    gallery.style.display = "none";
+
     document.querySelector(".slider-wrapper").classList.remove("slider-hide");
+    document.body.classList.remove("body-top");
 }
 
+
 function closeDropLetter() {
-    document.getElementById("dropLetter").style.display = "none";
+    const drop = document.getElementById("dropLetter");
+
+    drop.style.display = "none";
+
     document.querySelector(".slider-wrapper").classList.remove("slider-hide");
+    document.body.classList.remove("body-top");
 }
 
 
