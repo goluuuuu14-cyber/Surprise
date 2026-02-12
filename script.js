@@ -107,4 +107,19 @@ window.onload = function() {
     slider.style.transform = `translateX(-300px)`;
 };
 
+let galleryIndex = 0;
+
+function moveGallery(direction) {
+  const track = document.querySelector(".gallery-track");
+  const images = document.querySelectorAll(".gallery-track img");
+
+  galleryIndex += direction;
+
+  if (galleryIndex < 0) galleryIndex = 0;
+  if (galleryIndex > images.length - 1)
+      galleryIndex = images.length - 1;
+
+  track.style.transform = `translateX(-${galleryIndex * 200}px)`;
+}
+
 
