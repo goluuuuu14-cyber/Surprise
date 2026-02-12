@@ -82,6 +82,7 @@ body {
 }
 
 .letter-window {
+    position: relative;
     width: 90vw;
     max-width: 800px;
     aspect-ratio: 3/2;
@@ -189,6 +190,7 @@ p {
 /* ===== GALLERY (BOTTOM SLIDING PANEL) ===== */
 
 .gallery {
+    position: fixed;
     display: none;
     position: fixed;
     bottom: 0;
@@ -250,3 +252,18 @@ p {
     transition: 1s;
     text-align: center;
 }
+
+/* ===== CLOSE BUTTON ===== */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    z-index: 50;
+}
+
