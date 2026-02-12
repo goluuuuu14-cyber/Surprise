@@ -124,12 +124,23 @@ function closeLetter() {
     const letterContainer = document.getElementById("letter-container");
     const letterWindow = document.querySelector(".letter-window");
 
+    // Remove animation state
     letterWindow.classList.remove("open");
+    letterWindow.classList.remove("final");
+
+    // Hide letter
     letterContainer.style.display = "none";
 
+    // Show slider again
     document.querySelector(".slider-wrapper").classList.remove("slider-hide");
-    document.body.classList.remove("body-top");
+
+    // Reset YES/NO state
+    document.getElementById("letter-buttons").style.display = "flex";
+    document.getElementById("final-text").style.display = "none";
+    document.getElementById("letter-title").textContent = "Will you be my Valentine?";
+    document.getElementById("letter-cat").src = "cat_heart.gif";
 }
+
 
 function closeGallery() {
     const gallery = document.getElementById("gallery");
