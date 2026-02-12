@@ -175,4 +175,38 @@ function closePreview() {
     document.getElementById("imagePreview").style.display = "none";
 }
 
+// ================= IMAGE PREVIEW nav=================
+let previewImages = [];
+let currentPreviewIndex = 0;
 
+function openPreview(img) {
+
+    previewImages = Array.from(document.querySelectorAll(".gallery-track img"));
+    currentPreviewIndex = previewImages.indexOf(img);
+
+    const preview = document.getElementById("imagePreview");
+    const previewImg = document.getElementById("previewImg");
+
+    preview.style.display = "flex";
+    previewImg.src = img.src;
+}
+
+function movePreview(direction) {
+
+    currentPreviewIndex += direction;
+
+    if (currentPreviewIndex < 0) {
+        currentPreviewIndex = previewImages.length - 1;
+    }
+
+    if (currentPreviewIndex >= previewImages.length) {
+        currentPreviewIndex = 0;
+    }
+
+    document.getElementById("previewImg").src =
+        previewImages[currentPreviewIndex].src;
+}
+
+function closePreview() {
+    document.getElementById("imagePreview").style.display = "none";
+}
