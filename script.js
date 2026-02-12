@@ -161,4 +161,15 @@ function closeDropLetter() {
     document.body.classList.remove("body-top");
 }
 
+function expandImage(img) {
+  const preview = document.getElementById("imagePreview");
+  const previewImg = document.getElementById("previewImg");
+
+  previewImg.src = img.src;
+  preview.style.display = "flex";
+}
+
+function closePreview() {
+  document.getElementById("imagePreview").style.display = "none";
+}
 
