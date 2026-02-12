@@ -164,6 +164,12 @@ function closeDropLetter() {
 // ================= IMAGE PREVIEW =================
 
 function openPreview(img) {
+    document.getElementById("imagePreview").onclick = function(e){
+    if(e.target.id === "imagePreview"){
+        closePreview();
+    }
+};
+
     const preview = document.getElementById("imagePreview");
     const previewImg = document.getElementById("previewImg");
 
