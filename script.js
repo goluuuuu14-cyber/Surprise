@@ -62,12 +62,12 @@ function moveSlide(direction) {
     if (currentSlide < 0) currentSlide = 0;
     if (currentSlide > totalSlides - 1) currentSlide = totalSlides - 1;
 
-    slider.style.transform = `translateX(-${currentSlide * 300}px)`;
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
 window.onload = function () {
     const slider = document.getElementById("slider");
-    slider.style.transform = "translateX(-300px)";
+    slider.style.transform = "translateX(-100%)";
 };
 
 
