@@ -193,3 +193,17 @@ display: inline-block;
   flex-shrink: 0;
 }
 
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.gallery-nav.left { left: 0; }
+.gallery-nav.right { right: 0; }
