@@ -14,10 +14,10 @@ body {
 
 .slider-wrapper {
     position: relative;
-    width: 300px;
-    margin: 150px auto 0 auto;
+    width: 100%;
+    max-width: 600px;
+    margin: 120px auto;
     overflow: hidden;
-    text-align: center;
 }
 
 .slider {
@@ -26,11 +26,12 @@ body {
 }
 
 .slide {
-    min-width: 300px;
+    min-width: 100%;
+    text-align: center;
 }
 
 .icon {
-    width: 120px;
+    width: 140px;
     cursor: pointer;
 }
 
@@ -38,14 +39,17 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
+    background: white;
     border: none;
-    font-size: 30px;
+    font-size: 28px;
+    padding: 8px 14px;
     cursor: pointer;
+    border-radius: 8px;
+    z-index: 10;
 }
 
-.left { left: -40px; }
-.right { right: -40px; }
+.nav.left { left: 10px; }
+.nav.right { right: 10px; }
 
 
 /* ===== LETTER WINDOW (Main YES/NO Part) ===== */
