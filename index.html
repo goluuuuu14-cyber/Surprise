@@ -15,21 +15,37 @@
     <title>Document</title>
   </head>
   <body>
-    <div style="position: fixed; top: 20px; left: 20px; font-size: 30px; cursor: pointer; z-index: 9999;" onclick="toggleGallery()">
-    📁
-</div>
-
-<div style="position: fixed; top: 20px; right: 20px; font-size: 30px; cursor: pointer; z-index: 9999;" onclick="openLetterDrop()">
-    ✉️
-</div>
 
 </div>
 
-    <!-- Envelope Screen -->
-    <div id="envelope-container">
-      <img src="envelope.png" alt="Envelope" id="envelope" />
-      <p>♡ Letter for You ♡</p>
+   <div class="slider-wrapper">
+  <button class="nav left" onclick="moveSlide(-1)">&#10094;</button>
+
+  <div class="slider" id="slider">
+    
+    <!-- Moments Slide -->
+    <div class="slide">
+      <img src="folder.png" class="icon" onclick="toggleGallery()" />
+      <p>♡ Moments ♡</p>
     </div>
+
+    <!-- Center Letter Slide -->
+    <div class="slide">
+      <img src="envelope.png" class="icon" id="envelope" />
+      <p>♡ Letter For You ♡</p>
+    </div>
+
+    <!-- Words Slide -->
+    <div class="slide">
+      <img src="letter_icon.png" class="icon" onclick="openLetterDrop()" />
+      <p>♡ Words ♡</p>
+    </div>
+
+  </div>
+
+  <button class="nav right" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
 
     <!-- Letter Screen -->
     <div id="letter-container">
