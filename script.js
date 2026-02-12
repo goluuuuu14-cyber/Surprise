@@ -120,5 +120,19 @@ function openLetterDrop() {
     }, 100);
 }
 
+function closeLetter() {
+    document.getElementById("letter-container").style.display = "none";
+    document.querySelector(".slider-wrapper").classList.remove("slider-hide");
+}
+
+function closeGallery() {
+    document.getElementById("gallery").style.display = "none";
+    document.querySelector(".slider-wrapper").classList.remove("slider-hide");
+}
+
+function closeDropLetter() {
+    document.getElementById("dropLetter").style.display = "none";
+    document.querySelector(".slider-wrapper").classList.remove("slider-hide");
+}
 
 
