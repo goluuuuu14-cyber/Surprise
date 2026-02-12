@@ -104,11 +104,19 @@
   </div>
 </div>
 
-  <!-- IMAGE PREVIEW (PUT HERE) -->
-  <div id="imagePreview" class="image-preview">
-    <span class="close-preview" onclick="closePreview()">✕</span>
+  <!-- IMAGE PREVIEW -->
+<div id="imagePreview" class="image-preview">
+
+    <button class="preview-nav left" onclick="movePreview(-1)">&#10094;</button>
+
     <img id="previewImg">
-  </div>
+
+    <button class="preview-nav right" onclick="movePreview(1)">&#10095;</button>
+
+    <span class="close-preview" onclick="closePreview()">✕</span>
+
+</div>
+
   
 
 <script src="script.js"></script>
