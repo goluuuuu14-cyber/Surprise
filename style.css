@@ -7,7 +7,17 @@ body {
     background-size: cover;
     background-position: center;
     font-family: "Pixelify Sans", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.body-top {
+    align-items: flex-start;
+    padding-top: 80px;
+}
+
+
 
 
 /* ===== SLIDER WRAPPER ===== */
@@ -16,9 +26,9 @@ body {
     position: relative;
     width: 100%;
     max-width: 600px;
-    margin: 120px auto;
     overflow: hidden;
 }
+
 
 .slider {
     display: flex;
