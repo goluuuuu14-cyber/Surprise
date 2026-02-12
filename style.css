@@ -137,3 +137,37 @@ display: inline-block;
     background-color: rgba(255,240,240,0.5);
     border-radius: 12px;
 }
+.slider-wrapper {
+  position: relative;
+  width: 300px;
+  margin: 150px auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 300px;
+}
+
+.icon {
+  width: 120px;
+  cursor: pointer;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.left { left: -40px; }
+.right { right: -40px; }
