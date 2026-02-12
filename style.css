@@ -171,3 +171,17 @@ display: inline-block;
 
 .left { left: -40px; }
 .right { right: -40px; }
+.gallery {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.gallery-track {
+  display: inline-flex;
+}
+
+.gallery-track img {
+  width: 200px;
+  margin: 10px;
+}
+
