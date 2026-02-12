@@ -1,46 +1,64 @@
+/* ===== BODY ===== */
+
 body {
     margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
     background-image: url("heart-bg.jpg");
+    background-size: cover;
+    background-position: center;
     font-family: "Pixelify Sans", sans-serif;
 }
 
-/* Envelope Screen */
-#envelope-container {
+
+/* ===== SLIDER WRAPPER ===== */
+
+.slider-wrapper {
+    position: relative;
+    width: 300px;
+    margin: 150px auto 0 auto;
+    overflow: hidden;
     text-align: center;
-    cursor:pointer;
 }
 
-@keyframes pulse {
-    0% {
-        transform:scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
-#envelope{
-    width: 200px;
-    animation: pulse 1.5s infinite;
+.slide {
+    min-width: 300px;
+}
+
+.icon {
+    width: 120px;
     cursor: pointer;
 }
 
-#letter-container{
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.left { left: -40px; }
+.right { right: -40px; }
+
+
+/* ===== LETTER WINDOW (Main YES/NO Part) ===== */
+
+#letter-container {
     display: none;
-    position:fixed;
+    position: fixed;
     inset: 0;
     justify-content: center;
     align-items: center;
 }
 
-.letter-window{
+.letter-window {
     width: 90vw;
     max-width: 800px;
     aspect-ratio: 3/2;
@@ -55,7 +73,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 12px;
-    gap: 1px;
+    gap: 10px;
     padding-top: 180px;
 
     transform: scale(1.2);
@@ -70,14 +88,15 @@ body {
 
 h1 {
     font-size: 30px;
-    margin:0;
+    margin: 0;
 }
 
 p {
-    font-size: 40px;
+    font-size: 22px;
 }
 
-/* Cat */
+
+/* ===== CAT ===== */
 
 .cat {
     width: 250px;
@@ -89,7 +108,9 @@ p {
     width: 180px;
 }
 
-/* buttons */
+
+/* ===== BUTTONS ===== */
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -97,8 +118,8 @@ p {
     position: relative;
 }
 
-.no-wrapper{
-    position:relative;
+.no-wrapper {
+    position: relative;
 }
 
 .btn {
@@ -109,9 +130,9 @@ p {
 
 .yes-btn,
 .no-btn {
-width: 120px;
-height: auto;
-display: inline-block;
+    width: 120px;
+    height: auto;
+    display: inline-block;
 }
 
 .yes-btn {
@@ -128,101 +149,78 @@ display: inline-block;
     cursor: default;
 }
 
-.final-text{
-    font-size: 22px;
+.final-text {
+    font-size: 18px;
     line-height: 1.4;
     text-align: center;
     display: inline-block;
     padding: 10px 20px;
-    background-color: rgba(255,240,240,0.5);
+    background-color: rgba(255,240,240,0.6);
     border-radius: 12px;
 }
-.slider-wrapper {
-  position: relative;
-  width: 300px;
-  margin: 150px auto;
-  overflow: hidden;
-  text-align: center;
-}
 
-.slider {
-  display: flex;
-  transition: transform 0.5s ease;
-}
 
-.slide {
-  min-width: 300px;
-}
-
-.icon {
-  width: 120px;
-  cursor: pointer;
-}
-
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.left { left: -40px; }
-.right { right: -40px; }
+/* ===== GALLERY (BOTTOM SLIDING PANEL) ===== */
 
 .gallery {
-  width: 100%;
-  max-width: 800px;
-  margin: 40px auto;
-  overflow: hidden;
-  position: relative;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
 }
 
 .gallery-track {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
 }
 
 .gallery-track img {
-  width: 180px;
-  border-radius: 10px;
-  cursor: pointer;
-  flex-shrink: 0;
+    width: 180px;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
 .gallery-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: white;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.gallery-nav.left { left: 0; }
-.gallery-nav.right { right: 0; }
+.gallery-nav.left { left: 10px; }
+.gallery-nav.right { right: 10px; }
+
+
+/* ===== DROP LETTER OVERLAY ===== */
 
 .drop-letter {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
 }
 
 .letter-content {
-  background: white;
-  width: 300px;
-  margin: -400px auto 0;
-  padding: 20px;
-  transition: 1s;
+    background: white;
+    width: 300px;
+    margin: -400px auto 0;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 1s;
+    text-align: center;
 }
-
